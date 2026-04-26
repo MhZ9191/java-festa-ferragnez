@@ -13,21 +13,20 @@ public class CheckGuest {
         boolean isInvited=false;
 
         //CICLO FOR
-        // for(int i=0;i<guestList.length;i++){
-        //     if(guestList[i].equalsIgnoreCase(currentGuest.trim())){
-        //         isInvited=true;
-        //         break;
-        //     }
-        // }
-
-        //CICLO WHILE
-        int cont=0;
-        while(!isInvited && cont < guestList.length){
-            if(guestList[cont].equalsIgnoreCase(currentGuest.trim())){
+        for(int i=0;!isInvited && i< guestList.length;i++){
+            if(guestList[i].equalsIgnoreCase(currentGuest.trim())){
                 isInvited=true;
             }
-            cont++;
         }
+
+        //CICLO WHILE
+        // int cont=0;
+        // while(!isInvited && cont < guestList.length){
+        //     if(guestList[cont].equalsIgnoreCase(currentGuest.trim())){
+        //         isInvited=true;
+        //     }
+        //     cont++;
+        // }
 
         String message = isInvited ? "Sei nella lista! Passa pure" : "Mi spiace non sei in lista!";
         System.out.println(message);
